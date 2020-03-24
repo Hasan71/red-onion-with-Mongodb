@@ -1,0 +1,23 @@
+.final-order-aria {
+    padding: 31px 15px 28px 25px;
+  }
+  
+  .orders-items-aria {
+    max-height: 345px;
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+  }
+  
+  .order-item-aria.my-3 {
+    background: #e8e8e8;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  
+  .place-order-btn-disable {
+    background: gray;
+    cursor: not-allowed;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
