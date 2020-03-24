@@ -167,7 +167,7 @@ const foods = [
     
   ]  
 
-  const chooseData = [
+  const WhyChooseUS = [
     {
       title:'Fast Delivery',
       description:'Keep your system om sync with automated web hook based notification each time link is paid and how we dream about our future',
@@ -192,5 +192,6 @@ const foods = [
   ]
 
 
-  export {chooseData};
+  export {WhyChooseUS};
+  
   export default foods;
