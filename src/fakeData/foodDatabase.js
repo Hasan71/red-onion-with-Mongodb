@@ -7,7 +7,7 @@ const foods = [
         img:'https://i.ibb.co/HKKc2wN/breakfast1.png',
         catagories:'breakfast',
         price:9.99,
-        id:1001234854,
+        id:1001,
       },
       {
         title:'Breakfast sandwich',
@@ -16,7 +16,7 @@ const foods = [
         img:'https://i.ibb.co/VML366G/breakfast2.png',
         catagories:'breakfast',
         price:12.99,
-        id:10012374874,
+        id:1002,
       },
       {
         title:'baked chicken',
@@ -25,7 +25,7 @@ const foods = [
         img:'https://i.ibb.co/D75PKds/breakfast3.png',
         catagories:'breakfast',
         price:23.99,
-        id:10014564723,
+        id:1003,
       },
       {
         title:'Eggs benedict',
@@ -34,7 +34,7 @@ const foods = [
         img:'https://i.ibb.co/tZC9NDD/breakfast4.png',
         catagories:'breakfast',
         price:15.99,
-        id:1001778623,
+        id:1004,
       },
       {
         title:'Toast fried Egg Butter',
@@ -43,7 +43,7 @@ const foods = [
         img:'https://i.ibb.co/9t1TNdQ/breakfast5.png',
         catagories:'breakfast',
         price:7.99,
-        id:100123545444,
+        id:1005,
       },
       {
         title:'Full breakfast egg toast',
@@ -52,7 +52,7 @@ const foods = [
         img:'https://i.ibb.co/gwZn9PP/breakfast6.png',
         catagories:'breakfast',
         price:19.99,
-        id:100142447423,
+        id:1006,
       },
 
     {
@@ -62,7 +62,7 @@ const foods = [
       img:'https://i.ibb.co/N17Bm0T/lunch6.png',
       catagories:'lunch',
       price:9.99,
-      id:100123
+      id:1007,
     },
     {
       title:'Fried Chicken Bento',
@@ -71,7 +71,7 @@ const foods = [
       img:'https://i.ibb.co/DK5Q6Ws/lunch5.png',
       catagories:'lunch',
       price:12.99,
-      id:1001234,
+      id:1008,
     },
     {
       title:'Trragon Rubbed Salmon',
@@ -80,7 +80,7 @@ const foods = [
       img:'https://i.ibb.co/1LqhRP3/lunch3.png',
       catagories:'lunch',
       price:23.99,
-      id:100145234,
+      id:1009,
     },
     {
       title:'Indian Lunch',
@@ -89,7 +89,7 @@ const foods = [
       img:'https://i.ibb.co/LYhQcmp/lunch4.png',
       catagories:'lunch',
       price:15.99,
-      id:10012347,
+      id:1010,
     },
     {
       title:'Beaf Steak',
@@ -98,7 +98,7 @@ const foods = [
       img:'https://i.ibb.co/Dwzv8mB/lunch1.png',
       catagories:'lunch',
       price:7.99,
-      id:1001423,
+      id:1011,
     },
     {
       title:'Honey-Soy-Glazed Salmon with Peppers',
@@ -107,7 +107,7 @@ const foods = [
       img:'https://i.ibb.co/PGBV2gL/lunch2.png',
       catagories:'lunch',
       price:19.99,
-      id:1770123,
+      id:1012,
     },
 
     {
@@ -117,7 +117,7 @@ const foods = [
       img:'https://i.ibb.co/4Vx60G4/dinner1.png',
       catagories:'dinner',
       price:9.99,
-      id:108453,
+      id:1013,
     },
     {
       title:'Lemony Salmon',
@@ -126,7 +126,7 @@ const foods = [
       img:'https://i.ibb.co/5cdFMn8/dinner2.png',
       catagories:'dinner',
       price:12.99,
-      id:199123,
+      id:1014,
     },
     {
       title:'Chicken Tenderiain',
@@ -135,7 +135,7 @@ const foods = [
       img:'https://i.ibb.co/QMNNh85/dinner3.png',
       catagories:'dinner',
       price:23.99,
-      id:10483,
+      id:1015,
     },
     {
       title:'Baked Chicken',
@@ -144,7 +144,7 @@ const foods = [
       img:'https://i.ibb.co/rbRxb24/dinner4.png',
       catagories:'dinner',
       price:15.99,
-      id:107484,
+      id:1016,
     },
     {
       title:'Curlic Butter baked salmon',
@@ -153,7 +153,7 @@ const foods = [
       img:'https://i.ibb.co/QrRvGFw/dinner5.png',
       catagories:'dinner',
       price:7.99,
-      id:114414,
+      id:1017,
     },
     {
       title:'French fries with cheese',
@@ -162,7 +162,7 @@ const foods = [
       img:'https://i.ibb.co/DzVz6SZ/dinner6.png',
       catagories:'dinner',
       price:19.99,
-      id:1178123,
+      id:1018,
     },
     
   ]  

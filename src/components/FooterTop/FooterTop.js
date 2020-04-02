@@ -1,7 +1,7 @@
 import React from 'react';
 import './FooterTop.css'
 import { Link } from 'react-router-dom';
-
+import Logo from '../../images/logo.png';
 const FooterTop = () => {
     return (
         <section className="footer-top-area py-5">
@@ -9,7 +9,7 @@ const FooterTop = () => {
                 <div className="row">
                 <div className="col-xl-6">
                     <div className="img-area">
-                    <img src="../../images/logo.png" alt="" />
+                    <img src={Logo} alt=""/>
                     </div>
                 </div>
                 <div className="col-xl-6 d-flex footer-top-menu-aria">

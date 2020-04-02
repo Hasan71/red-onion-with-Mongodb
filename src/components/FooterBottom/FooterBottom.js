@@ -3,13 +3,14 @@ import './FooterBottom.css';
 import { Link } from 'react-router-dom';
 
 const FooterBottom = () => {
+    
     return (
         <footer>
             <div className="container">
                 <div className="row d-flex align-items-center justify-content-between">
                 <div className="col-6">
                     <div className="copyright">
-                    <p className="pt-3">&copy Mahmudul Hasan</p>
+                    <p className="pt-3"> © Mahmudul Hasan</p>
                     </div>
                 </div>
                 <div className="col-6">

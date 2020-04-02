@@ -64,10 +64,10 @@ if(cart.length === 0) {
 
 const handleCheckout = () => {
   checkOutOrder()
-  props.history.push('/checkout')
+  props.history.push('/checkout');
 }
 const handleSubmit = e => {
-  e.preventDefault()
+  e.preventDefault();
 }
 
   return (

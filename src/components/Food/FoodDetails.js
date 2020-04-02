@@ -5,33 +5,33 @@ import foods from '../../fakeData/foodDatabase'
 import { UserContext } from '../Auth/useAuth';
 
 const FoodDetails = (props) => {
-  const {addToCart } = useContext(UserContext)
-  const prodId = useParams()
-  const [quantity, setQuantity] = useState(1)
-  const [product, setProduct] = useState(null)
+  const {addToCart } = useContext(UserContext);
+  const prodId = useParams();
+  const [quantity, setQuantity] = useState(1);
+  const [product, setProduct] = useState(null);
 
   useEffect(()=>{
     const data = foods.filter(item => item.id === parseInt(prodId.id))
-    setProduct(data[0])
+    setProduct(data[0]);
   },[prodId])
 
 
   const onchangeHandler = e => {
     if(!isNaN(e.target.value)) {
-      setQuantity(e.target.value)
+      setQuantity(e.target.value);
     }
   }
   
   const cartHandler = item => {
     addToCart({...item, quantity})
-    props.history.push('/cart')
+    props.history.push('/cart');
   }
 
   const quantityHandler = quan => {
     if(quantity < 0 || quantity === 0) {
-      setQuantity(0)
+      setQuantity(0);
     } else {
-      setQuantity(quantity-quan)
+      setQuantity(quantity-quan);
     }
   }
 

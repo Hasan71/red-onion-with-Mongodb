@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import { Switch, Route} from 'react-router-dom';
 import HomePage from './components/Pages/HomePage';
@@ -17,7 +18,7 @@ import Foods from './components/Pages/Foods';
 function App() {
   return (
    <UserProvider>
-       <Header></Header>
+       <Header/>
 
       <Switch>
         <Route exact path="/" component={HomePage} />

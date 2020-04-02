@@ -3,7 +3,7 @@ import './Login.css'
 import Inputitem from '../Inputitem/Inputitem';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import { UserContext } from '../useAuth';
-
+import Logo2 from '../../../images/logo2.png';
 const Login = (props) => {
   const auth = useContext(UserContext)
   const [email, setEmail] = useState('')
@@ -49,7 +49,7 @@ const Login = (props) => {
             <div className="row">
                 <div className="col-md-4 col-md-offset-3 m-auto">
                 <div className="login-aria-logo py-5 m-auto">
-                    <img className="w-50 d-block m-auto" src="../../../images/logo2.png" alt="logo"/>
+                    <img className="w-50 d-block m-auto" src={Logo2} alt="logo"/>
                 </div>
                 <form onSubmit={loginUser}>
                     <Inputitem name="email" type="email" onchangeHandler={onchangeHandler} placeholder="Email" value={email} />

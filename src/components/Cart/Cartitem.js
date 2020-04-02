@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './Cartitem.css'
 import { UserContext } from '../Auth/useAuth';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Cartitem = ({item, onchangeHandler}) => {
 	
   const {calQuantity} = useContext(UserContext)
@@ -19,15 +19,17 @@ const Cartitem = ({item, onchangeHandler}) => {
       </div>
       <div className="quantity-aria w-50">
         <div className="input-group">
-          <button
-           onClick={() => calQuantity(item, -1)}className="btn btn-default">
-		   <i className="fas fa-minus"></i></button>
-          <h6 className="text-center"> {quantity} </h6>
+        <button
+           onClick={() => calQuantity(item, -1)}
+            className="btn btn-default"
+            ><i className="fas fa-minus"></i></button>
+          <h6 
+            className="text-center"
+          > {quantity} </h6>
           <button
           onClick={() => calQuantity(item, 1)}
-            className="btn btn-default">
-			<i className="fas fa-plus"> </i>
-		</button>
+            className="btn btn-default"
+            ><i className="fas fa-plus"></i></button>
         </div>
       </div>
     </div>

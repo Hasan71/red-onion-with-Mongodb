@@ -2,13 +2,14 @@ import React, { useContext, useState, useEffect } from 'react';
 import './Header.css'
 import { Link, withRouter } from 'react-router-dom'
 import { UserContext } from '../Auth/useAuth';
-
+import Logo2 from '../../images/logo2.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LoginUser = ({route}) => {
     const {logout} = useContext(UserContext)
     const logOutHandler = () => {
-        logout()
-        route.history.push('/login')        
+        logout();
+        route.history.push('/login');
     }
     return (
         <>
@@ -27,13 +28,13 @@ const LogoutUser = () => {
 }
 
 const Header = (props) => {
-    const {user, cart} = useContext(UserContext)
-    const [cartItem, setCartItem] = useState('')
+    const {user, cart} = useContext(UserContext);
+    const [cartItem, setCartItem] = useState('');
     useEffect(()=>{
         if(cart.length > 0 ) {
-            setCartItem(cart.length)
+            setCartItem(cart.length);
         } else {
-            setCartItem('')
+            setCartItem('');
         }
 
         
@@ -44,8 +45,8 @@ const Header = (props) => {
             <div className="container">
                 <div className="row d-flex align-items-center justify-content-between">
                     <div className="col">
-                        <div className="logo-aria">
-                            <Link to="/"><img src="../../images/logo2.png" alt="hot onion" /></Link>
+                        <div className="logo-area">
+                            <Link to="/"> <img src={Logo2 } alt="hot onion"/> </Link>
                         </div>
                     </div>
                     <div className="col">
@@ -55,8 +56,8 @@ const Header = (props) => {
                             <Link to="/cart">
                                 <button className="btn"> 
                                         <i className="fa fa-cart-plus" aria-hidden="true">
-                                            </i> <span style={{color:'red'}}> {cart && cartItem}</span>
-                                    </button></Link>
+                                        </i> <span style={{color:'red'}}> {cart && cartItem}</span>
+                                </button></Link>
                             </div>
                         </div>
                     </div>

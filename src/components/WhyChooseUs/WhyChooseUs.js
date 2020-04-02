@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {WhyChooseUS} from '../../fakeData/foodDatabase'
-import ChooseItem from './ChooseItem'
+import {WhyChooseUS} from '../../fakeData/foodDatabase';
+import ChooseItem from './ChooseItem';
 
 const WhyChooseUs = () => {
 
