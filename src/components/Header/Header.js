@@ -1,70 +1,50 @@
-import React, { useContext, useState, useEffect } from 'react';
-import './Header.css'
-import { Link, withRouter } from 'react-router-dom'
-import { UserContext } from '../Auth/useAuth';
-import Logo2 from '../../images/logo2.png'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-const LoginUser = ({route}) => {
-    const {logout} = useContext(UserContext)
-    const logOutHandler = () => {
-        logout();
-        route.history.push('/login');
-    }
-    return (
-        <>
-            <Link to="/user/profile"><button className="btn signup-btn primary-btn">Profile</button></Link>
-            <button className="btn" onClick={logOutHandler}>Logout</button>
-        </>
-    )
-}
-const LogoutUser = () => {
-    return (
-        <>
-            <Link to="/signup"><button className="btn signup-btn primary-btn">Sign up</button></Link>
-            <Link to="/login"><button className="btn">Login</button></Link>
-        </>
-    )
-}
-
+import React from 'react';
+import {Link} from 'react-router-dom';
+import './Header.css';
+import Logo from '../../Images/logo2.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { useAuth } from '../SignUp/useAuth';
 const Header = (props) => {
-    const {user, cart} = useContext(UserContext);
-    const [cartItem, setCartItem] = useState('');
-    useEffect(()=>{
-        if(cart.length > 0 ) {
-            setCartItem(cart.length);
-        } else {
-            setCartItem('');
-        }
-
-        
-    }, [cart])
+    const auth = useAuth();
 
     return (
-        <header>
+        <nav className="navbar navbar-expand navbar-light bg-white py-2 fixed-top">
             <div className="container">
-                <div className="row d-flex align-items-center justify-content-between">
-                    <div className="col">
-                        <div className="logo-area">
-                            <Link to="/"> <img src={Logo2 } alt="hot onion"/> </Link>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="header-right">
-                            <div className="d-flex">
-                                {user ? <LoginUser route={props} /> : <LogoutUser/> }
-                            <Link to="/cart">
-                                <button className="btn"> 
-                                        <i className="fa fa-cart-plus" aria-hidden="true">
-                                        </i> <span style={{color:'red'}}> {cart && cartItem}</span>
-                                </button></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Link to="/" className="navbar-brand">
+                    <img src={Logo} alt="Hot Onion Logo"/>
+                </Link>
+               
+                <ul className="navbar-nav align-items-center">
+                    <li className="nav-item active">
+                        <Link to="/checkout" className="nav-link"><FontAwesomeIcon className="cart-icon" icon={faCartArrowDown} /><span className="badge bg-light">{props.cart.length}</span></Link>
+                    </li>
+                    <li className="nav-item">
+                        {
+                            auth.user ?  
+                             <Link to="/checkout" className="nav-link">{auth.user.displayName}</Link> 
+                             :
+                             <Link to="/login" className="nav-link">Login</Link> 
+                        }
+                    </li>
+                    <li className="nav-item">
+                        {
+                            auth.user ? 
+                            <Link to="/" className="nav-link">
+                                <button onClick={() => {auth.signOut()}} className="btn btn-danger btn-rounded">Sign Out</button>
+                            </Link>
+                            :
+                            <Link to="/login" className="nav-link">
+                                <button className="btn btn-danger btn-rounded">Sign Up</button>
+                            </Link>
+                        }
+                       
+                    </li>
+                </ul>
+
             </div>
-        </header>
+        </nav>
     );
 };
 
-export default withRouter(Header);
+export default Header;
